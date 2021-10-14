@@ -7,11 +7,15 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Scanner;
 
 class insert_alg {
     public static void main(String[] args) throws FileNotFoundException {
+        // start runtime record
+        long startTime = System.nanoTime();
+
         // misc var init
         //int[] data = {5, 3, 1, 6, 2, 4}; // sample dataset for sorting
         int str2int = 0; //store/convert str to int
@@ -59,6 +63,14 @@ class insert_alg {
 
         // display - after sort
         System.out.println("Sorted data array: " + samp_data);
+
+        //end runtime record
+        long endTime = System.nanoTime();
+
+        // format/display runtime
+        double runtime = (endTime - startTime) * Math.pow(10, -9);
+        DecimalFormat f = new DecimalFormat("##.00");
+        System.out.println("Runtime: " + f.format(runtime) + " second(s)");
 
     }
 }
