@@ -22,7 +22,7 @@ class insert_alg {
         HashMap<Integer, Integer> samp_data = new HashMap<Integer, Integer>();
 
         // file handler
-        File input = new File("<FILE INPUT PATH HERE");
+        File input = new File("FILE INPUT PATH HERE");
         Scanner reader = new Scanner(input);
 
         // continue to populate hashmap if file has next line
